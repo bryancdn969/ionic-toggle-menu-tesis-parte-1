@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import {ModalConfirmationPage} from "../pages/modal-confirmation/modal-confirmation";
+import {SlidesPage} from "../pages/slides/slides";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     ResetPasswordPage,
     SignupPage,
-    ModalConfirmationPage
+    ModalConfirmationPage,
+    SlidesPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     SignupPage,
     ResetPasswordPage,
-    ModalConfirmationPage
+    ModalConfirmationPage,
+    SlidesPage
   ],
   providers: [
     StatusBar,

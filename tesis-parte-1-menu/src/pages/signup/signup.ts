@@ -4,6 +4,7 @@ import { IonicPage, NavController,LoadingController,
   AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {LoginPage} from "../login/login";
+//import { SignupPage} from "../signup/signup";
 import {ModalConfirmationPage} from "../modal-confirmation/modal-confirmation";
 
 @IonicPage()
@@ -13,15 +14,38 @@ import {ModalConfirmationPage} from "../modal-confirmation/modal-confirmation";
 })
 export class SignupPage {
 
-  constructor(public navCtrl: NavController, private modal: ModalController) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController,
+              private modal: ModalController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SignupPage');
   }
 
-  openModal() {
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Alert',
+      subTitle: 'You are sure the create this account?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            //this.navCtrl.setRoot(SignupPage);
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.navCtrl.setRoot(LoginPage);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
 
+  openModal() {
     const myModalOptions: ModalOptions = {
       enableBackdropDismiss: false
     };
@@ -32,7 +56,6 @@ export class SignupPage {
     };
 
     const myModal: Modal = this.modal.create(ModalConfirmationPage, { data: myModalData }, myModalOptions);
-
     myModal.present();
 
     myModal.onDidDismiss((data) => {
@@ -44,7 +67,6 @@ export class SignupPage {
       console.log("I'm about to dismiss");
       console.log(data);
     });
-
   }
 
   cancelar(){

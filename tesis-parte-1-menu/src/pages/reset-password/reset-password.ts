@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {AlertController, IonicPage, NavController, NavParams} from 'ionic-angular';
+import {LoginPage} from "../login/login";
 
 /**
  * Generated class for the ResetPasswordPage page.
@@ -15,11 +16,35 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ResetPasswordPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController,
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResetPasswordPage');
+  }
+
+  presentAlert() {
+    let alert = this.alertCtrl.create({
+      title: 'Alert',
+      subTitle: 'A temporary password has been sent to your email, please review it.',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            //this.navCtrl.setRoot(SignupPage);
+          }
+        },
+        {
+          text: 'OK',
+          handler: () => {
+            this.navCtrl.setRoot(LoginPage);
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

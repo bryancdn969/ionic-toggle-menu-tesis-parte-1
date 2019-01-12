@@ -3,6 +3,7 @@ import { IonicPage, NavController,LoadingController, Loading, AlertController} f
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
 import { SignupPage} from "../signup/signup";
+import {HomePage} from "../home/home";
 import {ResetPasswordPage} from "../reset-password/reset-password";
 
 @IonicPage()
@@ -25,6 +26,10 @@ export class LoginPage {
 
   goToResetPassword(){
     this.navCtrl.setRoot(ResetPasswordPage);
+  }
+
+  loginUser(){
+    this.navCtrl.setRoot(HomePage);
   }
 
 }
