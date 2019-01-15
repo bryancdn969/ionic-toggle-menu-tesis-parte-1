@@ -10,6 +10,7 @@ import { SignupPage } from '../pages/signup/signup';
 import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import {ModalConfirmationPage} from "../pages/modal-confirmation/modal-confirmation";
 import {SlidesPage} from "../pages/slides/slides";
+import {SecureSitePage} from "../pages/secure-site/secure-site";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +25,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ResetPasswordPage,
     SignupPage,
     ModalConfirmationPage,
-    SlidesPage
+    SlidesPage,
+    SecureSitePage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SignupPage,
     ResetPasswordPage,
     ModalConfirmationPage,
-    SlidesPage
+    SlidesPage,
+    SecureSitePage
   ],
   providers: [
     StatusBar,

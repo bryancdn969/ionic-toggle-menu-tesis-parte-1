@@ -3,16 +3,166 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Hi, Bryan Ocaña <img class="foto" src="../../assets/imgs/perfil.jpg"/></ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="card-background-page" class="fondo">
+  <ion-card>
+    <ion-card-title class="text">Last trip made</ion-card-title>
+    <img class="mapa_dashboard" src="../../assets/imgs/dashboard_mapa.jpg"/>
+    <ion-card-content>
+      <p>You are watching your last trip, and if you have not done it yet, you are seeing your current position. :)</p>
+    </ion-card-content>
+  </ion-card>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-card>
+    <ion-card-title class="text">Connected friends</ion-card-title>
+    <ion-list>
+      <button ion-item>
+        <img class="image" src="../../assets/imgs/perfil.jpg" item-start/>
+        <ion-label>Bryan Ocaña</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
+      </button>
+      <button ion-item>
+        <img class="image" src="../../assets/imgs/padre.png" item-start/>
+        <ion-label>Vicente Ocaña</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
+      </button>
+      <button ion-item>
+        <img class="image" src="../../assets/imgs/tamis.png" item-start/>
+        <ion-label>Tamaris Ocaña</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
+      </button>
+      <button ion-item>
+        <img class="image" src="../../assets/imgs/mercy.png" item-start/>
+        <ion-label>Mercy Herrera</ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
+      </button>
+      <button ion-item>
+        <img class="image" src="../../assets/imgs/nani.png" item-start/>
+        <ion-label>Daniel Moromenacho</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
+      </button>
+    </ion-list>
+  </ion-card>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-card>
+    <ion-card-title class="text">Share app by</ion-card-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/facebook.jpg"/></ion-col>
+        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/instagram.jpg"/></ion-col>
+        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/whatsapp.jpg"/></ion-col>
+        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/twiter.jpg"/></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+  <!--<ion-card>
+    <h3 class="text">Last trip made</h3>
+    <img class="mapa_dashboard" src="../../assets/imgs/dashboard_mapa.jpg"/>
+  </ion-card>
+
+  <ion-card>
+    <h3 class="text">Connected friends</h3>
+    <div class="scroll-content" style="">
+
+      <ion-list class="list list-ios">
+        <ion-list-header class="item item-ios list-header list-header-ios"><div class="item-inner"><div class="input-wrapper">&lt;!&ndash;&ndash;&gt;<ion-label class="label label-ios">
+          Settings
+        </ion-label></div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-list-header>
+
+        <ion-item class="item item-block item-ios item-toggle"><ion-icon color="danger" item-start="" name="plane" role="img" class="icon icon-ios icon-ios-danger ion-ios-plane item-icon" aria-label="plane"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-1">Airplane Mode</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-toggle color="secondary" class="toggle toggle-ios toggle-ios-secondary"><div class="toggle-icon"><div class="toggle-inner"></div></div><button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" disable-activated="" ion-button="item-cover" role="checkbox" type="button" id="toggle-1-0" aria-checked="false" aria-labelledby="lbl-1" aria-disabled="false"><span class="button-inner"></span><div class="button-effect"></div></button></ion-toggle>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+
+        <button class="item item-block item-ios" ion-item=""><ion-icon color="primary" item-start="" name="wifi" role="img" class="icon icon-ios icon-ios-primary ion-ios-wifi item-icon" aria-label="wifi"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-2">Wi-Fi</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-note item-end="" class="note note-ios">The Interwebz</ion-note>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+
+        <button class="item item-block item-ios" ion-item=""><ion-icon color="primary" item-start="" name="bluetooth" role="img" class="icon icon-ios icon-ios-primary ion-ios-bluetooth item-icon" aria-label="bluetooth"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-3">Bluetooth</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-note item-end="" class="note note-ios">Off</ion-note>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+
+        <button class="item item-block item-ios" ion-item=""><ion-icon color="secondary" item-start="" name="call" role="img" class="icon icon-ios icon-ios-secondary ion-ios-call item-icon" aria-label="call"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-4">Cellular</ion-label>&lt;!&ndash;&ndash;&gt;</div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+
+        <button class="item item-block item-ios" ion-item=""><ion-icon color="secondary" item-start="" name="link" role="img" class="icon icon-ios icon-ios-secondary ion-ios-link item-icon" aria-label="link"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-5">Personal Hotspot</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-note item-end="" class="note note-ios">Off</ion-note>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+      </ion-list>
+
+      <ion-list radio-group="" role="radiogroup" class="list list-ios" aria-describedby="rg-hdr-0" aria-activedescendant="rb-7-0">
+        <ion-list-header class="item item-ios list-header list-header-ios" id="rg-hdr-0"><div class="item-inner"><div class="input-wrapper">&lt;!&ndash;&ndash;&gt;<ion-label class="label label-ios">
+          Silence Phone
+        </ion-label></div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-list-header>
+
+        <ion-item class="item item-block item-ios item-radio item-radio-checked"><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" class="label label-ios label-ios-dark" id="lbl-7">Always</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-radio checked="" value="always" class="radio radio-ios"><div class="radio-icon radio-checked"> <div class="radio-inner"></div> </div> <button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" ion-button="item-cover" role="radio" type="button" id="rb-7-0" aria-checked="true" aria-labelledby="lbl-7" aria-disabled="false"><span class="button-inner"> </span><div class="button-effect"></div></button></ion-radio>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+        <ion-item class="item item-block item-ios item-radio"><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" class="label label-ios label-ios-dark" id="lbl-8">Only while phone is locked</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-radio value="locked" class="radio radio-ios"><div class="radio-icon"> <div class="radio-inner"></div> </div> <button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" ion-button="item-cover" role="radio" type="button" id="rb-8-0" aria-checked="false" aria-labelledby="lbl-8" aria-disabled="false"><span class="button-inner"> </span><div class="button-effect"></div></button></ion-radio>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+      </ion-list>
+
+    </div>
+  </ion-card>
+
+  <ion-card>
+    <h3 class="text">Share app by: </h3>
+    <ion-img class="img_footer" src="../../assets/imgs/facebook.jpg"></ion-img>
+    <ion-img class="img_footer" src="../../assets/imgs/instagram.jpg"></ion-img>
+    <ion-img class="img_footer" src="../../assets/imgs/whatsapp.jpg"></ion-img>
+  </ion-card>-->
+
 </ion-content>
+
+<!--<ion-content padding class="fondo">
+  <ion-item>
+    <h3 class="text">Last trip made</h3>
+    <img class="mapa_dashboard" src="../../assets/imgs/dashboard_mapa.jpg"/>
+  </ion-item>
+  <br/>
+  <ion-item>
+    <h3 class="text">Connected friends</h3>
+    <ion-card>
+      <div class="scroll-content" style="">
+
+        <ion-list class="list list-ios">
+          <ion-list-header class="item item-ios list-header list-header-ios"><div class="item-inner"><div class="input-wrapper">&lt;!&ndash;&ndash;&gt;<ion-label class="label label-ios">
+            Settings
+          </ion-label></div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-list-header>
+
+          <ion-item class="item item-block item-ios item-toggle"><ion-icon color="danger" item-start="" name="plane" role="img" class="icon icon-ios icon-ios-danger ion-ios-plane item-icon" aria-label="plane"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-1">Airplane Mode</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-toggle color="secondary" class="toggle toggle-ios toggle-ios-secondary"><div class="toggle-icon"><div class="toggle-inner"></div></div><button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" disable-activated="" ion-button="item-cover" role="checkbox" type="button" id="toggle-1-0" aria-checked="false" aria-labelledby="lbl-1" aria-disabled="false"><span class="button-inner"></span><div class="button-effect"></div></button></ion-toggle>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+
+          <button class="item item-block item-ios" ion-item=""><ion-icon color="primary" item-start="" name="wifi" role="img" class="icon icon-ios icon-ios-primary ion-ios-wifi item-icon" aria-label="wifi"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-2">Wi-Fi</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-note item-end="" class="note note-ios">The Interwebz</ion-note>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+
+          <button class="item item-block item-ios" ion-item=""><ion-icon color="primary" item-start="" name="bluetooth" role="img" class="icon icon-ios icon-ios-primary ion-ios-bluetooth item-icon" aria-label="bluetooth"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-3">Bluetooth</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-note item-end="" class="note note-ios">Off</ion-note>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+
+          <button class="item item-block item-ios" ion-item=""><ion-icon color="secondary" item-start="" name="call" role="img" class="icon icon-ios icon-ios-secondary ion-ios-call item-icon" aria-label="call"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-4">Cellular</ion-label>&lt;!&ndash;&ndash;&gt;</div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+
+          <button class="item item-block item-ios" ion-item=""><ion-icon color="secondary" item-start="" name="link" role="img" class="icon icon-ios icon-ios-secondary ion-ios-link item-icon" aria-label="link"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-5">Personal Hotspot</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-note item-end="" class="note note-ios">Off</ion-note>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></button>
+        </ion-list>
+
+        <ion-list radio-group="" role="radiogroup" class="list list-ios" aria-describedby="rg-hdr-0" aria-activedescendant="rb-7-0">
+          <ion-list-header class="item item-ios list-header list-header-ios" id="rg-hdr-0"><div class="item-inner"><div class="input-wrapper">&lt;!&ndash;&ndash;&gt;<ion-label class="label label-ios">
+            Silence Phone
+          </ion-label></div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-list-header>
+
+          <ion-item class="item item-block item-ios item-radio item-radio-checked"><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" class="label label-ios label-ios-dark" id="lbl-7">Always</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-radio checked="" value="always" class="radio radio-ios"><div class="radio-icon radio-checked"> <div class="radio-inner"></div> </div> <button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" ion-button="item-cover" role="radio" type="button" id="rb-7-0" aria-checked="true" aria-labelledby="lbl-7" aria-disabled="false"><span class="button-inner"> </span><div class="button-effect"></div></button></ion-radio>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+          <ion-item class="item item-block item-ios item-radio"><div class="item-inner"><div class="input-wrapper"><ion-label color="dark" class="label label-ios label-ios-dark" id="lbl-8">Only while phone is locked</ion-label>&lt;!&ndash;&ndash;&gt;</div><ion-radio value="locked" class="radio radio-ios"><div class="radio-icon"> <div class="radio-inner"></div> </div> <button class="item-cover disable-hover item-cover-ios item-cover-default item-cover-default-ios" ion-button="item-cover" role="radio" type="button" id="rb-8-0" aria-checked="false" aria-labelledby="lbl-8" aria-disabled="false"><span class="button-inner"> </span><div class="button-effect"></div></button></ion-radio>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+        </ion-list>
+
+        <ion-list class="list list-ios">
+          <ion-list-header class="item item-ios list-header list-header-ios"><div class="item-inner"><div class="input-wrapper">&lt;!&ndash;&ndash;&gt;<ion-label class="label label-ios">
+            Apps Installed
+          </ion-label></div>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-list-header>
+
+          <ion-item class="item item-block item-ios"><ion-icon color="primary" item-start="" name="ionic" role="img" class="icon icon-ios icon-ios-primary ion-ios-ionic item-icon" aria-label="ionic"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-10">Ionic View</ion-label>&lt;!&ndash;&ndash;&gt;</div><button ion-button="" item-end="" outline="" class="disable-hover item-button button button-ios button-outline button-outline-ios"><span class="button-inner">Uninstall</span><div class="button-effect"></div></button>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+          <ion-item class="item item-block item-ios"><ion-icon color="primary" item-start="" name="brush" role="img" class="icon icon-ios icon-ios-primary ion-ios-brush item-icon" aria-label="brush"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-11">Ionic Creator</ion-label>&lt;!&ndash;&ndash;&gt;</div><button ion-button="" item-end="" outline="" class="disable-hover item-button button button-ios button-outline button-outline-ios"><span class="button-inner">Uninstall</span><div class="button-effect"></div></button>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+          <ion-item class="item item-block item-ios"><ion-icon color="dark" item-start="" name="logo-octocat" role="img" class="icon icon-ios icon-ios-dark ion-logo-octocat item-icon" aria-label="logo octocat"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-12">Hubstruck</ion-label>&lt;!&ndash;&ndash;&gt;</div><button ion-button="" item-end="" outline="" class="disable-hover item-button button button-ios button-outline button-outline-ios"><span class="button-inner">Uninstall</span><div class="button-effect"></div></button>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+          <ion-item class="item item-block item-ios"><ion-icon color="danger" item-start="" name="paw" role="img" class="icon icon-ios icon-ios-danger ion-ios-paw item-icon" aria-label="paw"></ion-icon><div class="item-inner"><div class="input-wrapper"><ion-label class="label label-ios" id="lbl-13">Barkpark</ion-label>&lt;!&ndash;&ndash;&gt;</div><button ion-button="" item-end="" outline="" class="disable-hover item-button button button-ios button-outline button-outline-ios"><span class="button-inner">Uninstall</span><div class="button-effect"></div></button>&lt;!&ndash;&ndash;&gt;</div><div class="button-effect"></div></ion-item>
+        </ion-list>
+
+      </div>
+    </ion-card>
+  </ion-item>
+  <ion-item>
+    <h3 class="text">Share app by: </h3>
+    <ion-img class="img_footer" src="../../assets/imgs/facebook.jpg"></ion-img>
+    <ion-img class="img_footer" src="../../assets/imgs/instagram.jpg"></ion-img>
+    <ion-img class="img_footer" src="../../assets/imgs/whatsapp.jpg"></ion-img>
+  </ion-item>
+</ion-content>-->

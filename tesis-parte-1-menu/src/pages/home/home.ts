@@ -7,8 +7,11 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public navCtrl: NavController, public isToggled: boolean) {
+    this.isToggled = false;
   }
 
+  notify() {
+    console.log("Toggled: "+ this.isToggled);
+  }
 }
