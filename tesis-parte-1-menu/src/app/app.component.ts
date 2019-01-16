@@ -7,6 +7,10 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { SlidesPage } from '../pages/slides/slides';
 import {SecureSitePage} from "../pages/secure-site/secure-site";
+import {AddFriendsPage} from "../pages/add-friends/add-friends";
+import {SearchSecureSitesPage} from "../pages/search-secure-sites/search-secure-sites";
+import {ProfilePage} from "../pages/profile/profile";
+import {PanicButtonPage} from "../pages/panic-button/panic-button";
 
 @Component({
   templateUrl: 'app.html'
@@ -24,9 +28,14 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage},
-      { title: 'List', component: ListPage},
-      { title: 'Secure sites', component: SecureSitePage}
+      { title: '/',                   component: HomePage},
+      { title: 'Profile',             component: ProfilePage},
+      { title: 'Home',                component: HomePage},
+      { title: 'List',                component: ListPage},
+      { title: 'Panic Button',        component: PanicButtonPage},
+      { title: 'Secure sites',        component: SecureSitePage},
+      { title: 'Add friends',         component: AddFriendsPage},
+      { title: 'Search secure sites', component: SearchSecureSitesPage}
     ];
 
   }
