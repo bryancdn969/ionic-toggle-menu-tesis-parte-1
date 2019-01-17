@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController,LoadingController, Loading, AlertController} from 'ionic-angular';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs/Observable';
+import { IonicPage, NavController} from 'ionic-angular';
 import { SignupPage} from "../signup/signup";
 import {HomePage} from "../home/home";
 import {ResetPasswordPage} from "../reset-password/reset-password";

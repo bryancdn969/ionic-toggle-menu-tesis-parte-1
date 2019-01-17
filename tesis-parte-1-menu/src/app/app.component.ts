@@ -23,26 +23,23 @@ export class MyApp {
   //rootPage: any = HomePage;
   rootPage: any = SlidesPage;
 
-  pages: Array<{title: string, component: any, icon:string}>;
+  pages: Array<{title: string, component: any,icon:string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
     private translate: TranslateService, private config: Config) {
-    this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: '/',                   component: HomePage             ,icon:'person'},
-      { title: 'Profile',             component: ProfilePage          ,icon:'person'},
       { title: 'Home',                component: HomePage             ,icon:'person'},
+      { title: 'Profile',             component: ProfilePage          ,icon:'person'},
       { title: 'List',                component: ListPage             ,icon:'person'},
       { title: 'Panic Button',        component: PanicButtonPage      ,icon:'person'},
       { title: 'Secure sites',        component: SecureSitePage       ,icon:'person'},
       { title: 'Add friends',         component: AddFriendsPage       ,icon:'person'},
       { title: 'Search secure sites', component: SearchSecureSitesPage,icon:'person'}
     ];
-    statusBar.styleDefault();
-    splashScreen.hide();
-    this.initTranslate();
+    this.initializeApp();
+    //this.initTranslate();
   }
 
   initializeApp() {
@@ -84,10 +81,5 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
-  }
-
-  logoutClicked() {
-    console.log("Logout");
-    this.platform.exitApp();
   }
 }
