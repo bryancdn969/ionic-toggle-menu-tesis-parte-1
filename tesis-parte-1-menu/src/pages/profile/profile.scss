@@ -1,3 +1,37 @@
 page-profile {
+  .img{
+    height: 40vw;
+    width: 40vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+    display: inline-block;
+    margin-left: 82px;
+    margin-right: auto;
+    margin-top: 9px;
+  }
 
+  .cardProfile {
+    background-image: url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+    position: center;
+  }
+
+  .fondo{
+    height: 100%;
+    background: linear-gradient(rgb(55, 78, 162), rgb(97, 33, 34)) no-repeat;
+  }
+
+  .btn{
+    background-color: rgb(104, 145, 162);
+  }
+
+  .border{
+    //border-color: rgb(104, 145, 162);
+    border-bottom-color: rgb(104, 145, 162);
+  }
+
+  .aligncenter{
+    text-align: center;
+    text-transform:uppercase;
+  }
 }
