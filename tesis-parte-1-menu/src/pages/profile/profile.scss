@@ -21,17 +21,22 @@ page-profile {
     background: linear-gradient(rgb(55, 78, 162), rgb(97, 33, 34)) no-repeat;
   }
 
-  .inputcolor{
-    text-decoration-color: #2d2d2d;
-  }
-
   .formcard{
     //border-color: rgb(104, 145, 162);
     background: linear-gradient(rgb(162, 142, 142),rgb(55, 78, 162));
   }
 
+  .slide{
+    background: linear-gradient(rgb(55, 78, 162), rgb(97, 33, 34)) no-repeat;
+  }
+
   .aligncenter{
     text-align: center;
     text-transform:uppercase;
+    margin-top: 15px;
+  }
+
+  .colordata{
+    background-color: lightgray;
   }
 }
