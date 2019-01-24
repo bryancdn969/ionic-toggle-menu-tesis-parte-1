@@ -20,8 +20,7 @@ import { TranslateService } from '@ngx-translate/core';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  //rootPage: any = HomePage;
-  rootPage: any = ProfilePage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any,icon:string}>;
 
@@ -32,7 +31,6 @@ export class MyApp {
     this.pages = [
       { title: 'Home',                component: HomePage             ,icon:'person'},
       { title: 'Profile',             component: ProfilePage          ,icon:'person'},
-      { title: 'List',                component: ListPage             ,icon:'person'},
       { title: 'Panic Button',        component: PanicButtonPage      ,icon:'person'},
       { title: 'Secure sites',        component: SecureSitePage       ,icon:'person'},
       { title: 'Add friends',         component: AddFriendsPage       ,icon:'person'},

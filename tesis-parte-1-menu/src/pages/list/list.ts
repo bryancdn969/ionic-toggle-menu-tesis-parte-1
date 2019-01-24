@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import {ProfilePage} from "../profile/profile";
 
 @Component({
   selector: 'page-list',
@@ -33,5 +34,9 @@ export class ListPage {
     this.navCtrl.push(ListPage, {
       item: item
     });
+  }
+
+  regresar() {
+    this.navCtrl.setRoot(ProfilePage);  // remember to put this to add the back button behavior
   }
 }

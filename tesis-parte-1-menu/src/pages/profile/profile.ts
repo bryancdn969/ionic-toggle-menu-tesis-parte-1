@@ -2,6 +2,7 @@ import {Component, ViewChild} from '@angular/core';
 import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ListPage} from "../list/list";
+import {HomePage} from "../home/home";
 
 @IonicPage()
 @Component({
@@ -24,7 +25,7 @@ export class ProfilePage {
     });
 
     setTimeout(_ => {
-      this.dateTime.setValue(new Date().toISOString());
+      //this.dateTime.setValue(new Date().toISOString());
     });
   }
 
@@ -36,4 +37,7 @@ export class ProfilePage {
     console.log('ionViewDidLoad ProfilePage');
   }
 
+  regresar() {
+    this.navCtrl.setRoot(HomePage);  // remember to put this to add the back button behavior
+  }
 }

@@ -25,12 +25,12 @@
         <ion-toggle checked="true"></ion-toggle>
         <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
       </button>
-      <button ion-item>
+      <!--<button ion-item>
         <img class="image" src="../../assets/imgs/padre.png" item-start/>
         <ion-label>Vicente Ocaña</ion-label>
         <ion-toggle checked="false"></ion-toggle>
-        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
-      </button>
+        <ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>
+      </button>-->
       <button ion-item>
         <img class="image" src="../../assets/imgs/tamis.png" item-start/>
         <ion-label>Tamaris Ocaña</ion-label>
@@ -43,12 +43,12 @@
         <ion-toggle checked="true"></ion-toggle>
         <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
       </button>
-      <button ion-item>
+      <!--<button ion-item>
         <img class="image" src="../../assets/imgs/nani.png" item-start/>
         <ion-label>Daniel Moromenacho</ion-label>
         <ion-toggle checked="false"></ion-toggle>
-        <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
-      </button>
+        <ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>
+      </button>-->
     </ion-list>
   </ion-card>
 
@@ -165,4 +165,15 @@
     <ion-img class="img_footer" src="../../assets/imgs/instagram.jpg"></ion-img>
     <ion-img class="img_footer" src="../../assets/imgs/whatsapp.jpg"></ion-img>
   </ion-item>
+
+  <ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+      <button ion-button (click)="doYourStuff()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="aligncenter">Profile</ion-title>
+  </ion-navbar>
+</ion-header>
 </ion-content>-->

@@ -1,3 +1,27 @@
 page-list {
+  .imgtitulo{
+    width: 310px;
+    height: 40px;
+  }
+
+  .fondo{
+    height: 100%;
+    background: linear-gradient(rgb(55, 78, 162), rgb(97, 33, 34)) no-repeat;
+  }
+
+  .image {
+    height: 10vw;
+    width: 10vw;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px gray;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .text{
+    text-align: center;
+  }
 
 }

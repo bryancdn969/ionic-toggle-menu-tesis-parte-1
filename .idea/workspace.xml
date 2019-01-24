@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="375ff9ec-378b-4ce8-9a90-ad72bdf9f751" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tesis-parte-1-menu/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tesis-parte-1-menu/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tesis-parte-1-menu/src/assets/i18n/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tesis-parte-1-menu/src/assets/i18n/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tesis-parte-1-menu/src/assets/i18n/pt.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,7 +17,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tesis-parte-1-menu/src/app/app.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="153">
               <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
@@ -31,7 +30,7 @@
         <entry file="file://$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -39,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="408">
               <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
             </state>
           </provider>
@@ -48,7 +47,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/tesis-parte-1-menu" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -65,66 +64,22 @@
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="AndroidView" />
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ionic-toggle-menu-tesis-parte-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ionic-toggle-menu-tesis-parte-1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ionic-toggle-menu-tesis-parte-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ionic-toggle-menu-tesis-parte-1" type="462c0819:PsiDirectoryNode" />
-              <item name="tesis-parte-1-menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ionic-toggle-menu-tesis-parte-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ionic-toggle-menu-tesis-parte-1" type="462c0819:PsiDirectoryNode" />
-              <item name="tesis-parte-1-menu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ionic-toggle-menu-tesis-parte-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ionic-toggle-menu-tesis-parte-1" type="462c0819:PsiDirectoryNode" />
-              <item name="tesis-parte-1-menu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ionic-toggle-menu-tesis-parte-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ionic-toggle-menu-tesis-parte-1" type="462c0819:PsiDirectoryNode" />
-              <item name="tesis-parte-1-menu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ionic-toggle-menu-tesis-parte-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ionic-toggle-menu-tesis-parte-1" type="462c0819:PsiDirectoryNode" />
-              <item name="tesis-parte-1-menu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="profile" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/xampp/htdocs/antawa_react_spectre" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tesis-parte-1-menu" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="ts.external.directory.path" value="C:\Users\Developer Bryan\Documents\GitHub\ionic-toggle-menu-tesis-parte-1\tesis-parte-1-menu\node_modules\typescript\lib" />
@@ -153,17 +108,17 @@
       <updated>1547731313180</updated>
       <workItem from="1547731315794" duration="6553000" />
       <workItem from="1547817058573" duration="6373000" />
+      <workItem from="1548213955211" duration="105000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12926000" />
+    <option name="totallyTimeSpent" value="13031000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -236,7 +191,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tesis-parte-1-menu/src/app/app.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="153">
           <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
             <element signature="e#0#53#0" expanded="true" />
@@ -246,7 +201,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="408">
           <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
         </state>
       </provider>
@@ -254,7 +209,7 @@
     <entry file="file://$PROJECT_DIR$/tesis-parte-1-menu/src/pages/profile/profile.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
