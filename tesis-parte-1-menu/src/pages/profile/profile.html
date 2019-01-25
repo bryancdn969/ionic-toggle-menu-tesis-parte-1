@@ -30,16 +30,14 @@
   </ion-card>
   <ion-card>
     <form (ngSubmit)="saveData()">
-
       <ion-segment class="segment segment-ios ng-untouched ng-pristine ng-valid">
         <ion-segment-button class="segment-button" role="button" tappable="" value="paid" aria-pressed="false" (click)="list()">
-          See all your Friends
+          Friends
           <div class="button-effect"></div></ion-segment-button>
-        <ion-segment-button class="segment-button segment-activated" role="button" tappable="" value="free" aria-pressed="true">
+        <ion-segment-button class="segment-button segment-activated" role="button" tappable="" value="free" aria-pressed="true" (click)="update()">
           Update Information
           <div class="button-effect"></div></ion-segment-button>
       </ion-segment>
-
       <ion-item class="colordata">
         <h2 class="aligncenteruserdat"><b>User Data</b></h2>
       </ion-item>
@@ -69,7 +67,6 @@
           <ion-input type="number" value="0998249810" disabled></ion-input>
           <!--<ion-input formControlName="phone" type="number" placeholder="0998249810" disabled></ion-input>-->
         </ion-item>
-
         <ion-item>
           <ion-icon name="calendar" item-start></ion-icon>
           <ion-label stacked>Birthday:</ion-label>
@@ -82,15 +79,11 @@
           <ion-input type="text" value="Quito" disabled></ion-input>
           <!--<ion-input formControlName="city" type="text" placeholder="Quito" disabled></ion-input>-->
         </ion-item>
-
-
         <button ion-button block type="submit">Change Password</button>
         <!--<button ion-button block type="submit" [disabled]="!myForm.valid">Change Password</button>-->
       </div>
     </form>
   </ion-card>
 </ion-content>
-
-<!--
-https://blog.ng-classroom.com/blog/ionic2/forms-with-ionic/-->
+<!--https://blog.ng-classroom.com/blog/ionic2/forms-with-ionic/-->
 

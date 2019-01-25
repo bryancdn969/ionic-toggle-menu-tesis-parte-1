@@ -1,8 +1,9 @@
 import {Component, ViewChild} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, NavController} from 'ionic-angular';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ListPage} from "../list/list";
 import {HomePage} from "../home/home";
+import {SignupPage} from "../signup/signup";
 
 @IonicPage()
 @Component({
@@ -15,8 +16,13 @@ export class ProfilePage {
 
   form: FormGroup;
   myDate: FormControl = new FormControl('', Validators.required);
+  activeItems = "false";
+  profile = "Profile";
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private fb: FormBuilder) {
+  constructor(public navCtrl: NavController, private fb: FormBuilder) {
+    localStorage.setItem('update',this.activeItems);
+    console.log("profile", localStorage.getItem('update'));
+    localStorage.setItem('changePage', this.profile);
   }
 
   ngOnInit() {
@@ -39,5 +45,9 @@ export class ProfilePage {
 
   regresar() {
     this.navCtrl.setRoot(HomePage);  // remember to put this to add the back button behavior
+  }
+
+  update(){
+    this.navCtrl.setRoot(SignupPage);
   }
 }

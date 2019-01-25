@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the PanicButtonPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {HomePage} from "../home/home";
 
 @IonicPage()
 @Component({
@@ -20,6 +14,14 @@ export class PanicButtonPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PanicButtonPage');
+  }
+
+  regresar() {
+    this.navCtrl.setRoot(HomePage);  // remember to put this to add the back button behavior
+  }
+
+  addFriends(){
+
   }
 
 }

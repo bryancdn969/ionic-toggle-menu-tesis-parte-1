@@ -1,6 +1,12 @@
 <ion-header>
   <ion-navbar>
-    <ion-title class="aligncenter">Signup</ion-title>
+    <ion-buttons left>
+      <button ion-button (click)="regresar()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title class="aligncenter" [hidden]=titleSignup>Signup</ion-title>
+    <ion-title class="aligncenter" [hidden]=titleUpdate>Update Information</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -31,12 +37,30 @@
             <ion-option value="m">Male</ion-option>
           </ion-select>
         </ion-item>
-        <ion-item>
+        <ion-item [hidden]=boolean>
+          <ion-icon name="call" item-start></ion-icon>
+          <ion-label stacked>CellPhone:</ion-label>
+          <ion-input type="number" value="0998249810" disabled></ion-input>
+          <!--<ion-input formControlName="phone" type="number" placeholder="0998249810" disabled></ion-input>-->
+        </ion-item>
+        <ion-item [hidden]=boolean>
+          <ion-icon name="calendar" item-start></ion-icon>
+          <ion-label stacked>Birthday:</ion-label>
+          <ion-input type="MM-DD-YYYY" value="1994-07-05" disabled></ion-input>
+          <!--<ion-datetime formControlName="dateBirth" displayFormat="MM-DD-YYYY" formControlName="myDate" disabled></ion-datetime>-->
+        </ion-item>
+        <ion-item [hidden]=boolean>
+          <ion-icon name="globe" item-start></ion-icon>
+          <ion-label stacked>City:</ion-label>
+          <ion-input type="text" value="Quito" disabled></ion-input>
+          <!--<ion-input formControlName="city" type="text" placeholder="Quito" disabled></ion-input>-->
+        </ion-item>
+        <ion-item [hidden]=activePassword>
           <ion-icon name="key" item-left></ion-icon>
           <ion-label stacked>Password:</ion-label>
           <ion-input type="password" placeholder="Password"></ion-input>
         </ion-item>
-        <ion-item>
+        <ion-item [hidden]=activePassword>
           <ion-icon name="key" item-left></ion-icon>
           <ion-label stacked>Confirm Password:</ion-label>
           <ion-input type="password" placeholder="Password"></ion-input>
@@ -44,7 +68,8 @@
       </ion-list>
     </ion-card>
     <div padding>
-      <button ion-button block type="submit">Register</button>
+      <button ion-button block type="submit" [hidden]=buttonRegister>Register</button>
+      <button ion-button block type="submit" [hidden]=buttonUpdate>Update</button>
     </div>
   </form>
   <div text-center>

@@ -1,10 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Config } from 'ionic-angular';
+import { Nav, Platform, Config, App, MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { SlidesPage } from '../pages/slides/slides';
 import {SecureSitePage} from "../pages/secure-site/secure-site";
 import {AddFriendsPage} from "../pages/add-friends/add-friends";
@@ -13,6 +12,7 @@ import {ProfilePage} from "../pages/profile/profile";
 import {PanicButtonPage} from "../pages/panic-button/panic-button";
 
 import { TranslateService } from '@ngx-translate/core';
+import {LoginPage} from "../pages/login/login";
 
 @Component({
   templateUrl: 'app.html'
@@ -20,21 +20,32 @@ import { TranslateService } from '@ngx-translate/core';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = "";
+  count = "FirstTime";
 
   pages: Array<{title: string, component: any,icon:string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
-    private translate: TranslateService, private config: Config) {
+              private translate: TranslateService, private config: Config, public menuCtrl: MenuController,
+              public app: App) {
+    localStorage.getItem('init');
+    if(localStorage.getItem('init') != this.count){
+      this.rootPage = SlidesPage;
+      localStorage.setItem('init', this.count);
+      console.log("Contador set: " + this.count);
+    }else {
+      console.log("Contador else: " + this.count);
+      this.rootPage = LoginPage;
+    }
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home',                component: HomePage             ,icon:'person'},
       { title: 'Profile',             component: ProfilePage          ,icon:'person'},
+      { title: 'Follow a friend',     component: SearchSecureSitesPage,icon:'person'},
       { title: 'Panic Button',        component: PanicButtonPage      ,icon:'person'},
       { title: 'Secure sites',        component: SecureSitePage       ,icon:'person'},
-      { title: 'Add friends',         component: AddFriendsPage       ,icon:'person'},
-      { title: 'Search secure sites', component: SearchSecureSitesPage,icon:'person'}
+      { title: 'Add friends',         component: AddFriendsPage       ,icon:'person'}
     ];
     this.initializeApp();
     //this.initTranslate();
@@ -80,4 +91,5 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
+
 }

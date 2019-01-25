@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController,LoadingController, 
-  Loading, Modal, ModalController, ModalOptions,
-  AlertController } from 'ionic-angular';
+  Loading, Modal, ModalController, ModalOptions, AlertController } from 'ionic-angular';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {LoginPage} from "../login/login";
-//import { SignupPage} from "../signup/signup";
 import {ModalConfirmationPage} from "../modal-confirmation/modal-confirmation";
+import {ProfilePage} from "../profile/profile";
 
 @IonicPage()
 @Component({
@@ -14,8 +13,33 @@ import {ModalConfirmationPage} from "../modal-confirmation/modal-confirmation";
 })
 export class SignupPage {
 
-  constructor(public navCtrl: NavController, private alertCtrl: AlertController,
-              private modal: ModalController) {
+  signup = "Register";
+  boolean        : any;
+  activePassword : any;
+  buttonRegister : any;
+  buttonUpdate   : any;
+  titleSignup    : any;
+  titleUpdate    : any;
+
+  constructor(public navCtrl: NavController, private alertCtrl: AlertController, private modal: ModalController) {
+    //localStorage.setItem('changePage',this.signup);
+    localStorage.getItem('update');
+    console.log("update",localStorage.getItem('update') + "==" + null);
+    if(localStorage.getItem('update') == null){
+      this.boolean        = true;
+      this.activePassword = false;
+      this.buttonRegister = false;
+      this.buttonUpdate   = true;
+      this.titleSignup    = false;
+      this.titleUpdate    = true;
+    }else if(localStorage.getItem('update') == "false"){
+      this.boolean        = false;
+      this.activePassword = true;
+      this.buttonRegister = true;
+      this.buttonUpdate   = false;
+      this.titleSignup    = true;
+      this.titleUpdate    = false;
+    }
   }
 
   ionViewDidLoad() {
@@ -70,7 +94,20 @@ export class SignupPage {
   }
 
   cancelar(){
-    this.navCtrl.setRoot(LoginPage);
+    if(localStorage.getItem('changePage') == "Profile") {
+      this.navCtrl.setRoot(ProfilePage);
+    }else {
+      this.navCtrl.setRoot(LoginPage);
+    }
+  }
+
+  regresar() {
+    console.log(localStorage.getItem('changePage') +" == "+ "Profile");
+    if(localStorage.getItem('changePage') == "Profile") {
+      this.navCtrl.setRoot(ProfilePage);  // remember to put this to add the back button behavior
+    }else {
+      this.navCtrl.setRoot(LoginPage);
+    }
   }
 
 }
