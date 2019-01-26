@@ -6,25 +6,27 @@
 
 <ion-content>
   <form (ngSubmit)="loginUser()">
-    <ion-list>
-      <ion-item text-center class="fondo">
-        <ion-img class="img" src="assets/imgs/fis.jpg"></ion-img>
-      </ion-item>
-      <br/>
-      <ion-item>
-        <ion-icon name="mail" item-left></ion-icon>
-        <ion-label stacked>Email:</ion-label>
-        <ion-input type="text" placeholder="Email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="key" item-left></ion-icon>
-        <ion-label stacked>Password:</ion-label>
-        <ion-input type="password" placeholder="Password"></ion-input>
-      </ion-item>
-    </ion-list>
-    <div padding>
-      <button ion-button block class="btn">Login</button>
-    </div>
+    <ion-card>
+      <ion-list>
+        <ion-item text-center class="fondo">
+          <ion-img class="img" src="assets/imgs/fis.jpg"></ion-img>
+        </ion-item>
+        <br/>
+        <ion-item>
+          <ion-icon name="mail" item-left></ion-icon>
+          <ion-label stacked>Email:</ion-label>
+          <ion-input type="text" placeholder="Email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="key" item-left></ion-icon>
+          <ion-label stacked>Password:</ion-label>
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <div padding>
+        <button ion-button block class="btn">Login</button>
+      </div>
+    </ion-card>
   </form>
   <div text-center>
     <a ion-button block clear (click)="goToSignup()">

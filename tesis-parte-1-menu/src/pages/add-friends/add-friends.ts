@@ -1,12 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AddFriendsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import {TranslateService} from "@ngx-translate/core";
 
 @IonicPage()
 @Component({
@@ -15,7 +9,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AddFriendsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  loginErrorString: string;
+  requiredData: string;
+
+  constructor(public navCtrl: NavController,public translateService: TranslateService, public navParams: NavParams) {
+    this.translateService.get('HOME_ERROR').subscribe((value) => {
+      this.loginErrorString = value;
+    });
+    this.translateService.get('REQUIRED_DATA').subscribe((value) => {
+      this.requiredData = value;
+    });
   }
 
   ionViewDidLoad() {
