@@ -1,18 +1,32 @@
-<!--
-  Generated template for the SearchSecureSitesPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>search-secure-sites</ion-title>
-  </ion-navbar>
-
+    <ion-navbar>
+        <ion-buttons left>
+          <button ion-button (click)="regresar()">
+            <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="fondo">
+    <form>
+      <h2 class="aligncenter">Search a secure site</h2>
+        <ion-card>
+            <ion-item>
+                <ion-label>Types of secure sites</ion-label>
+                <ion-select>
+                  <ion-option>Parks</ion-option>
+                  <ion-option>Firefighters</ion-option>
+                  <ion-option>Police</ion-option>
+                  <ion-option>Clinics</ion-option>
+                  <ion-option>Hospitals</ion-option>
+                  <ion-option>Everyone</ion-option>
+                </ion-select>
+              </ion-item>
+        </ion-card>
+        <div padding>
+          <button ion-button block type="submit" >Register</button>  
+        </div>
+      </form>
 </ion-content>

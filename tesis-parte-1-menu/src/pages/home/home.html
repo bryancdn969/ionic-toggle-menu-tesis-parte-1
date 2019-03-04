@@ -3,16 +3,24 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{'HI'|translate}}, Bryan Ocaña <img class="foto" src="../../assets/imgs/perfil.jpg"/></ion-title>
+    <ion-title>{{'HI'|translate}}, Bryan Ocaña
+      <ion-chip>
+        <ion-avatar class="avatar">
+          <img src={{avatarImg}}>
+        </ion-avatar>
+      </ion-chip>
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="fondo">
   <ion-card>
     <ion-card-title class="text">{{'LAST TRIP MADE'|translate}}</ion-card-title>
-    <img class="mapa_dashboard" src="../../assets/imgs/dashboard_mapa.jpg"/>
+    <img class="mapa_dashboard" src="../../assets/imgs/dashboard_mapa.jpg" />
     <ion-card-content>
-      <p>{{'YOU ARE WATCHING YOUR LAST TRIP, AND IF YOU HAVE NOT DONE IT YET, YOU ARE SEEING YOUR CURRENT POSITION'|translate}}. :)</p>
+      <p>{{'YOU ARE WATCHING YOUR LAST TRIP, AND IF YOU HAVE NOT DONE IT YET, YOU ARE SEEING YOUR CURRENT POSITION'|translate}}.
+        :)
+      </p>
     </ion-card-content>
   </ion-card>
 
@@ -20,7 +28,7 @@
     <ion-card-title class="text">{{'CONNECTED FRIENDS' | translate}}</ion-card-title>
     <ion-list>
       <button ion-item>
-        <img class="image" src="../../assets/imgs/perfil.jpg" item-start/>
+        <img class="image" src={{avatarImg}} item-start/>
         <ion-label>Bryan Ocaña</ion-label>
         <ion-toggle checked="true"></ion-toggle>
         <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
@@ -32,13 +40,13 @@
         <ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>
       </button>-->
       <button ion-item>
-        <img class="image" src="../../assets/imgs/tamis.png" item-start/>
+        <img class="image" src={{avatarImg}} item-start/>
         <ion-label>Tamaris Ocaña</ion-label>
         <ion-toggle checked="true"></ion-toggle>
         <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
       </button>
       <button ion-item>
-        <img class="image" src="../../assets/imgs/mercy.png" item-start/>
+        <img class="image" src={{avatarImg}} item-start/>
         <ion-label>Mercy Herrera</ion-label>
         <ion-toggle checked="true"></ion-toggle>
         <!--<ion-toggle [(ngModel)]="isToggled" onChange="notify()"></ion-toggle>-->
@@ -56,10 +64,18 @@
     <ion-card-title class="text">{{'SHARE THIS APP BY'|translate}}</ion-card-title>
     <ion-grid>
       <ion-row>
-        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/facebook.jpg"/></ion-col>
-        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/instagram.jpg"/></ion-col>
-        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/whatsapp.jpg"/></ion-col>
-        <ion-col width-25> <img class="img_footer" src="../../assets/imgs/twiter.jpg"/></ion-col>
+        <ion-col width-25>
+          <img class="img_footer" src="../../assets/imgs/facebook.jpg" />
+        </ion-col>
+        <ion-col width-25>
+          <img class="img_footer" src="../../assets/imgs/instagram.jpg" />
+        </ion-col>
+        <ion-col width-25>
+          <img class="img_footer" src="../../assets/imgs/whatsapp.jpg" />
+        </ion-col>
+        <ion-col width-25>
+          <img class="img_footer" src="../../assets/imgs/twiter.jpg" />
+        </ion-col>
       </ion-row>
     </ion-grid>
   </ion-card>

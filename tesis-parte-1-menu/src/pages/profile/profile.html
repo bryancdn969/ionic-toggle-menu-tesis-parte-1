@@ -21,7 +21,7 @@
   <ion-card class="cardProfile">
     <ion-icon name="reverse-camera"> Change</ion-icon>
     <ion-avatar item-start>
-      <img class="img" src="../../assets/imgs/perfil.jpg"/>
+      <img class="img" src={{avatarImg}}/>
     </ion-avatar>
     <ion-card-content>
       <img align="right" src="../../assets/imgs/fis.jpg" class="piepagina">
@@ -29,7 +29,7 @@
     </ion-card-content>
   </ion-card>
   <ion-card>
-    <form (ngSubmit)="saveData()">
+    <form (ngSubmit)="resetPasswrod()">
       <ion-segment class="segment segment-ios ng-untouched ng-pristine ng-valid">
         <ion-segment-button class="segment-button" role="button" tappable="" value="paid" aria-pressed="false" (click)="list()">
           Friends
@@ -79,7 +79,7 @@
           <ion-input type="text" value="Quito" disabled></ion-input>
           <!--<ion-input formControlName="city" type="text" placeholder="Quito" disabled></ion-input>-->
         </ion-item>
-        <button ion-button block type="submit">Change Password</button>
+        <button ion-button block>Change Password</button>
         <!--<button ion-button block type="submit" [disabled]="!myForm.valid">Change Password</button>-->
       </div>
     </form>

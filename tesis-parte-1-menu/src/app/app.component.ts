@@ -42,9 +42,9 @@ export class MyApp {
     this.pages = [
       { title: 'Home',                component: HomePage             ,icon:'person'},
       { title: 'Profile',             component: ProfilePage          ,icon:'person'},
-      { title: 'Follow a friend',     component: SearchSecureSitesPage,icon:'person'},
+      { title: 'Secure sites',        component: SearchSecureSitesPage,icon:'person'},
       { title: 'Panic Button',        component: PanicButtonPage      ,icon:'person'},
-      { title: 'Secure sites',        component: SecureSitePage       ,icon:'person'},
+      { title: 'Follow a friend',     component: SecureSitePage       ,icon:'person'},
       { title: 'Add friends',         component: AddFriendsPage       ,icon:'person'}
     ];
     this.initializeApp();

@@ -47,26 +47,50 @@ export class SignupPage {
   }
 
   presentAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'Alert',
-      subTitle: 'You are sure the create this account?',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            //this.navCtrl.setRoot(SignupPage);
+    console.log(this.buttonUpdate)  ;
+    if(this.buttonUpdate == false){
+      let alert = this.alertCtrl.create({
+        title: 'Alert',
+        subTitle: 'You are sure the update the information?',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: () => {
+              //this.navCtrl.setRoot(SignupPage);
+            }
+          },
+          {
+            text: 'Yes',
+            handler: () => {
+              this.navCtrl.setRoot(ProfilePage);
+            }
           }
-        },
-        {
-          text: 'Yes',
-          handler: () => {
-            this.navCtrl.setRoot(LoginPage);
+        ]
+      });
+      alert.present();
+    } else {
+      let alert = this.alertCtrl.create({
+        title: 'Alert',
+        subTitle: 'You are sure the create this account?',
+        buttons: [
+          {
+            text: 'Cancel',
+            role: 'cancel',
+            handler: () => {
+              //this.navCtrl.setRoot(SignupPage);
+            }
+          },
+          {
+            text: 'Yes',
+            handler: () => {
+              this.navCtrl.setRoot(LoginPage);
+            }
           }
-        }
-      ]
-    });
-    alert.present();
+        ]
+      });
+      alert.present();
+    }
   }
 
   openModal() {

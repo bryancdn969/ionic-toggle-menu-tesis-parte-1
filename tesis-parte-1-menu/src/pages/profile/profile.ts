@@ -4,6 +4,7 @@ import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {ListPage} from "../list/list";
 import {HomePage} from "../home/home";
 import {SignupPage} from "../signup/signup";
+import {ResetPasswordPage} from "../reset-password/reset-password";
 
 @IonicPage()
 @Component({
@@ -19,7 +20,10 @@ export class ProfilePage {
   activeItems = "false";
   profile = "Profile";
 
+  avatarImg : string = null;  
+
   constructor(public navCtrl: NavController, private fb: FormBuilder) {
+    this.avatarImg = "http://www.precision-spine.com/wp-content/uploads/2015/09/person-icon.png";
     localStorage.setItem('update',this.activeItems);
     console.log("profile", localStorage.getItem('update'));
     localStorage.setItem('changePage', this.profile);
@@ -49,5 +53,9 @@ export class ProfilePage {
 
   update(){
     this.navCtrl.setRoot(SignupPage);
+  }
+
+  resetPasswrod(){
+    this.navCtrl.setRoot(ResetPasswordPage);
   }
 }
