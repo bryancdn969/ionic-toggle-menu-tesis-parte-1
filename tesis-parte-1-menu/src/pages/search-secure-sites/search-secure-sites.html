@@ -1,32 +1,36 @@
 <ion-header>
-    <ion-navbar>
-        <ion-buttons left>
-          <button ion-button (click)="regresar()">
-            <ion-icon class="customIcon" name="arrow-back"></ion-icon>
-          </button>
-        </ion-buttons>
-      </ion-navbar>
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button (click)="regresar()">
+        <ion-icon class="customIcon" name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding class="fondo">
-    <form>
-      <h2 class="aligncenter">Search a secure site</h2>
-        <ion-card>
-            <ion-item>
-                <ion-label>Types of secure sites</ion-label>
-                <ion-select>
-                  <ion-option>Parks</ion-option>
-                  <ion-option>Firefighters</ion-option>
-                  <ion-option>Police</ion-option>
-                  <ion-option>Clinics</ion-option>
-                  <ion-option>Hospitals</ion-option>
-                  <ion-option>Everyone</ion-option>
-                </ion-select>
-              </ion-item>
-        </ion-card>
-        <div padding>
-          <button ion-button block type="submit" >Register</button>  
-        </div>
-      </form>
+  <form (ngSubmit)="loadMap()">
+    <h2 class="aligncenter">Search a secure site</h2>
+    <ion-card>
+      <ion-item>
+        <ion-label>Types of secure sites</ion-label>
+        <ion-select ngModelOptions="signup.state">
+          <!--<ion-option *ngIf="typesSites.state==0" value="0" [selected]="true">Select Site</ion-option>-->
+          <ion-option *ngFor="let site of sites" [value]="site.value">{{site.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <div padding>
+        <button ion-button block type="submit">Search</button>
+      </div>
+    </ion-card>
+
+    <ion-buttons end>
+      <button ion-button (click)="addMarker()">
+        <ion-icon name="add"></ion-icon>
+        Add Marker
+      </button>
+    </ion-buttons>
+  </form>
+  <div #map id="map" [hidden]=boolean></div>
 </ion-content>
